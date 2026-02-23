@@ -1,0 +1,37 @@
+Goal: Install Git and confirm it works.
+
+macOS (recommended)
+
+Open Terminal
+
+Run: brew install git
+
+git --version
+
+If prompted to install Command Line Tools, accept and let it finish.
+
+Confirm again:
+
+git --version
+
+Windows
+
+Download and install Git for Windows
+
+During install, keep defaults unless your company requires specific settings.
+
+Open Git Bash and run:
+
+git --version
+
+Basic Git identity (helps with commits)
+
+Run:
+
+git config --global user.name "Your Name"
+
+git config --global user.email "you@email.com"
+
+Confirm:
+
+git config --global --list

@@ -1,0 +1,23 @@
+Goal: Install Docker and run a test container.
+macOS
+    Install Docker Desktop
+Open Docker Desktop and wait until it says it’s running
+In Terminal:
+docker version
+    docker run hello-world
+
+Windows
+Install Docker Desktop
+    Ensure WSL2 is enabled (Docker will guide you)
+
+Test:
+
+    docker version
+    docker run hello-world
+
+Quick checks when Docker acts up
+
+    Docker Desktop running?
+docker info works?
+
+Any VPN/corporate proxy interfering?

@@ -1,0 +1,52 @@
+Goal: Install AWS CLI, configure profiles, and store access/secret keys safely.
+Install AWS CLI
+
+macOS
+
+Install AWS CLI (official installer is preferred)
+
+Confirm:
+    aws --version
+
+Windows
+    Install AWS CLI MSI package
+
+Confirm:
+    aws --version
+
+Configure credentials (recommended: profiles)
+        Run:
+    aws configure --profile dev
+Enter:
+    AWS Access Key ID (from AWS console / IAM)
+    AWS Secret Access Key
+    Default region (example: us-east-1)
+    Output format (example: json)
+
+This creates files:
+    ~/.aws/credentials (keys)
+    ~/.aws/config (region/output)
+
+Verify the profile works
+        Run:
+            aws sts get-caller-identity --profile dev
+
+You should see your AWS account/user/role identity.
+Use the profile without typing it every time
+    Option A (one command at a time):
+        aws s3 ls --profile dev
+
+    Option B (set environment variable for your terminal session):
+        export AWS_PROFILE=dev
+
+Then just run: aws s3 ls
+
+Where to find keys in AWS Console (high level)
+
+Go to IAM
+    Select the user (or use role-based access if required)
+    Create/rotate access keys (follow company policy)
+    Copy keys once and store securely (password manager preferred)
+Security note for your runbook:
+    Never paste keys into code or commit to Git.
+    Rotate keys regularly if your policy requires it.

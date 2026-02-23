@@ -1,0 +1,27 @@
+Goal: Install VS Code + useful extensions.
+macOS
+Download and install Visual Studio Code
+    Open VS Code → Cmd + Shift + P
+
+Search: Shell Command: Install 'code' command in PATH
+Confirm terminal access:   
+Close Terminal, reopen
+    Run: code --version
+
+Windows
+Install VS Code
+During install, check:
+
+“Add to PATH”
+
+Open PowerShell:
+
+    code --version
+
+Baseline extensions (good for SRE)
+AWS Toolkit
+Docker
+HashiCorp Terraform
+YAML
+GitLens
+Remote - SSH (if you access servers)
